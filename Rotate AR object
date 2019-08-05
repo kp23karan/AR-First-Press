@@ -1,0 +1,12 @@
+#pragma strict
+
+// Emulate the rotate node :-)
+public var CY: GameObject;
+function Start () {
+
+}
+
+function Update () 
+{
+CY.transform.Rotate (0, 1,0);
+}
