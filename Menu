@@ -1,0 +1,44 @@
+#pragma strict
+import UnityEngine.SceneManagement;
+public var VR: UI.Button;
+public var AR: UI.Button;
+public var Exit: UI.Button;
+public var Recipe: UI.Button;
+//public var cs :GameObject= null ;
+function Start () {
+		
+//		VR = VR.GetComponent.<UI.Button>();
+//		VR.onClick.AddListener(On_VR);
+	AR = AR.GetComponent.<UI.Button>();
+		AR.onClick.AddListener(On_AR);
+	Exit = Exit.GetComponent.<UI.Button>();
+		Exit.onClick.AddListener(On_Exit);
+}
+
+function Update () {
+ if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }	
+}
+
+function On_Exit (){
+//global.selectedRole = 'Exit';
+SceneManager.LoadScene('home');
+//cs.SetActive(true);
+}
+function On_VR ()
+{
+//global.selectedRole = 'VRB';
+Application.OpenURL("www.firstpresscoffee.com");
+}
+function On_AR ()
+{
+//global.selectedRole = 'ARB';
+SceneManager.LoadScene('ARscene');
+}
+function On_Recipe ()
+{
+//global.selectedRole = 'ARB';
+SceneManager.LoadScene('Recipe');
+}
